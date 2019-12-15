@@ -4,6 +4,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+var cors = require('cors');
+
 
 const port = process.env.PORT||8080;
 
@@ -23,7 +25,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-import cors from 'cors';
 //const mongo_uri = 'mongodb://localhost/react-listtsk';
 const mongo_uri = 'mongodb+srv://yogesh:N032084@cluster0-cj3wh.mongodb.net/test?retryWrites=true&w=majority';
 mongoose.connect(mongo_uri, { useNewUrlParser: true }, function(err) {
