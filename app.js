@@ -32,6 +32,7 @@ mongoose.connect(mongo_uri, { useNewUrlParser: true }, function(err) {
     console.log(`Successfully connected to ${mongo_uri}`);
   }
 });
+app.use(cors());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
