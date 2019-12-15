@@ -36,7 +36,7 @@ class CourseProvider extends Component {
         let token = jwt_decode(localStorage.usertoken);
         let id = token.id
         axios
-            .post('http://localhost:8080/addtocart/'+id, {
+            .post('/addtocart/'+id, {
                 cart: this.state.cart,
                 total: this.state.cartTotal
             })
