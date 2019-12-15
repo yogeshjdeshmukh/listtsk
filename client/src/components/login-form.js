@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import {withRouter, Redirect } from 'react-router-dom'
 import axios from 'axios'
 
+
 class LoginForm extends Component {
     constructor(props) {
         super(props)
@@ -29,11 +30,12 @@ class LoginForm extends Component {
       }  
 
     handleSubmit(event) {
+        
         event.preventDefault()
         console.log('handleSubmit')
 
         axios
-            .post('http://localhost:8080/login', {
+            .post('/login', {
                 email: this.state.email,
                 password: this.state.password
             })

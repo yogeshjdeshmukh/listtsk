@@ -22,8 +22,8 @@ class App extends Component {
     <Route path="/courses" component={ProductList}></Route>
         <Route path="/details" component={Details}></Route>
         <Route path="/cart" component={Cart}></Route>
-        <Route path="/login" component={Login}></Route>
-        <Route path="/register" component={Register}></Route>
+        <Route path="/signin" component={Login}></Route>
+        <Route path="/signup" component={Register}></Route>
        
     </Switch>
     <Modal></Modal>

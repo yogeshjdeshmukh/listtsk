@@ -59,7 +59,7 @@ class Signup extends Component {
           }
           console.log(user)
 		//request to server to add a new username/password
-		axios.post('http://localhost:8080/register', user)
+		axios.post('/register', user)
 			.then(response => {
 				console.log(response)
 				if (!response.data.errmsg) {
